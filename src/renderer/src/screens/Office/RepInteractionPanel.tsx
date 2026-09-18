@@ -38,15 +38,15 @@ type ActionState =
   | { kind: "created"; address?: string }
   | { kind: "exists" };
 
-function formatAmount(value: number): string {
+function formatAmount(value: number, locale?: string): string {
   if (value === 0) return "0";
   if (Math.abs(value) < 0.0001) return "< 0.0001";
-  return value.toLocaleString(undefined, { maximumFractionDigits: 4 });
+  return value.toLocaleString(locale ?? undefined, { maximumFractionDigits: 4 });
 }
 
-function formatUsd(value: number): string {
+function formatUsd(value: number, locale?: string): string {
   if (value > 0 && value < 0.01) return "< $0.01";
-  return `$${value.toLocaleString(undefined, {
+  return `$${value.toLocaleString(locale ?? "en-US", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })}`;
