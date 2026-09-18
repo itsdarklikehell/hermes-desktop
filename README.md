@@ -348,3 +348,11 @@ This repo is not affiliated to **Nous Research**. This is a community maintained
 For the core agent, docs, and CLI workflows, see the main Hermes Agent repository:
 
 - https://github.com/NousResearch/hermes-agent
+
+---
+
+## 🎥 Gource Visualization
+
+De ontwikkelhistorie van dit project wordt automatisch gegenereerd door de [Gource workflow](.github/workflows/gource.yml) bij elke push — rendered via [nbprojekt/gource-action@v1.3.0](https://github.com/marketplace/actions/gource-action) in 1080p. Het video-artifact is 30 dagen beschikbaar via de workflow-run (Actions → gource).
+
+<video src="https://raw.githubusercontent.com/itsdarklikehell/hermes-desktop/main/gource.mp4" controls width="100%"></video>
