@@ -41,7 +41,9 @@ type ActionState =
 function formatAmount(value: number, locale?: string): string {
   if (value === 0) return "0";
   if (Math.abs(value) < 0.0001) return "< 0.0001";
-  return value.toLocaleString(locale ?? undefined, { maximumFractionDigits: 4 });
+  return value.toLocaleString(locale ?? undefined, {
+    maximumFractionDigits: 4,
+  });
 }
 
 function formatUsd(value: number, locale?: string): string {
