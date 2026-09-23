@@ -353,6 +353,37 @@ For the core agent, docs, and CLI workflows, see the main Hermes Agent repositor
 
 ## 🎥 Gource Visualization
 
-De ontwikkelhistorie van dit project wordt automatisch gegenereerd door de [Gource workflow](.github/workflows/gource.yml) bij elke push — rendered via [nbprojekt/gource-action@v1.3.0](https://github.com/marketplace/actions/gource-action) in 1080p. Het video-artifact is 30 dagen beschikbaar via de workflow-run (Actions → gource).
+De ontwikkelhistorie van dit project wordt automatisch gegenereerd door de [Gource workflow](.github/workflows/gource.yml) bij elke push — rendered via [nbprojekt/gource-action@v1.3.0](https://github.com/marketplace/actions/gource-action) in 1080p bij 60 fps. Het video-artifact is 30 dagen beschikbaar via de workflow-run (Actions → gource).
+
+| Eigenschap | Waarde |
+|-----------|--------|
+| Resolutie | 1920×1080 (1080p) |
+| Frame rate | 60 fps |
+| Codec | H.264 (libx264, CRF 18) |
+| Audio | AAC 192 kbps, 48 kHz |
+| Duur | ~56 sec |
+| Startdatum | 2024-01-01 |
+
+### Video bekijken
 
 <video src="https://raw.githubusercontent.com/itsdarklikehell/hermes-desktop/main/gource.mp4" controls width="100%"></video>
+
+### Lokaal reproduceren
+
+```bash
+gource --title "Hermes Desktop development timeline" \
+  --output-ppm-stream - --output-framerate 60 \
+  --start-date "2024-01-01" \
+  --hide mouse,date,filenames \
+  --seconds-per-day 0.4 \
+  --auto-skip-seconds 0.1 \
+  --max-files 1500 \
+  --highlight-users \
+  --multi-sampling \
+  | ffmpeg -y -f image2pipe -r 60 -i - \
+    -c:v libx264 -crf 18 -preset medium -tune film \
+    -filter:v "scale=-1:1080" -sws_flags lanczos \
+    -c:a aac -b:a 192k -ar 48000 \
+    -movflags +faststart \
+    gource.mp4
+```
