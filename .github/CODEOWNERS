@@ -1,0 +1,13 @@
+# Default owners for everything in the repo
+* @itsdarklikehell
+
+# Core code
+/src/ @itsdarklikehell
+/lib/ @itsdarklikehell
+
+# Documentation
+/docs/ @itsdarklikehell
+*.md @itsdarklikehell
+
+# CI/CD
+.github/ @itsdarklikehell

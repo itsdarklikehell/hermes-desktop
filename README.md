@@ -5,6 +5,8 @@
   <a href="https://x.com/HermesOneApp"><img src="https://img.shields.io/badge/Follow Us-000000?style=for-the-badge&logo=x" alt="Twitter"></a>
   <a href="https://discord.gg/Fqu72h8z"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
   <a href="https://github.com/fathah/hermes-desktop/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://github.com/itsdarklikehell/hermes-desktop/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/itsdarklikehell/hermes-desktop/ci.yml?style=for-the-badge&label=CI" alt="CI"></a>
+  <a href="https://github.com/itsdarklikehell/hermes-desktop/actions/workflows/gource.yml"><img src="https://img.shields.io/github/actions/workflow/status/itsdarklikehell/hermes-desktop/gource.yml?style=for-the-badge&label=Gource" alt="Gource"></a>
   <a href="https://hermesone.org"><img src="https://img.shields.io/badge/Download-Releases-FF6600?style=for-the-badge" alt="Releases"></a>
 <a href="https://github.com/fathah/hermes-desktop/stargazers">
   <img src="https://img.shields.io/github/stars/fathah/hermes-desktop?style=for-the-badge&color=FFD700&label=Stars" alt="Stars">
